@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 25%;
+}
+
+.hero-hello {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.user-image {
+    max-width: 100%;
+    height: auto;
+    width: 40%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.user-image:hover {
+    transform: rotate(360deg);
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.scrolltop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #a3278f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.scrolltop:hover {
+    background-color: #330f2d;
+}
+
+.social {
+    margin-top: 10px;
+}
+
+.whatsapp, .vk {
+    margin: 0 5px;
+}
+
+h1, h2 {
+    color: #a3278f;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1:hover {
+    transform: scale(1.5);
+}
+
+footer {
+    background-color: #ffc9f6b6;
+    padding: 20px 0;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.hero-navigation a {
+    color: #a3278f;
+    text-decoration: none;
+}
+
+.hero-navigation a:hover {
+    text-decoration: underline;
+}
+
+
+.navbar-nav .nav-link {
+    color: #a3278f;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #330f2d;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero-hello {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-image {
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    .user-image {
+        max-width: 30%;
+    }
+}

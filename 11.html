@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тетрадь 11</title>
+    <style>
+        video {
+            display: none;
+        }
+        #contactForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">Заголовок</h1>
+    <h2 id="header">Заголовок 2</h2>
+    <video src="images/509865_cat_window_black_Italy black cat in window jumps out720p5000br.mp4" controls></video>
+    <div class="item">Элемент 1</div>
+    <div class="item">Элемент 2</div>
+
+    <button id="openFormButton">Открыть форму</button>
+
+    <form id="contactForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" required><br>
+
+        <label for="date">Дата:</label>
+        <input type="date" id="date"><br>
+
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" required></textarea><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        const formData = {
+            name: '',
+            email: '',
+            phone: '',
+            date: '',
+            comment: '',
+            printData: function() {
+                console.log(`Имя: ${this.name}`);
+                console.log(`E-mail: ${this.email}`);
+                console.log(`Телефон: ${this.phone}`);
+                console.log(`Дата: ${this.date}`);
+                console.log(`Комментарий: ${this.comment}`);
+            }
+        };
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            // Сбор данных из формы
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const comment = document.getElementById('comment').value;
+
+            if (!name || !email || !comment) {
+                alert('Пожалуйста, заполните все обязательные поля.');
+                return;
+            }
+
+            const phoneRegex = /^\d+$/; // Проверка на цифры
+            if (!phoneRegex.test(phone)) {
+                alert('Телефон должен содержать только цифры.');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Простое регулярное выражение
+            if (!emailRegex.test(email)) {
+                alert('Введите корректный e-mail.');
+                return;
+            }
+
+            // Записываем данные в объект formData
+            formData.name = name;
+            formData.email = email;
+            formData.phone = phone;
+            formData.date = date;
+            formData.comment = comment;
+
+            formData.printData();
+        }
+
+        // Добавляем обработчик события на кнопку открытия формы
+        const openFormButton = document.getElementById('openFormButton');
+        openFormButton.addEventListener('click', function() {
+            const form = document.getElementById('contactForm');
+            form.style.display = 'block'; // Показываем форму
+        });
+
+        // Добавляем обработчик события на кнопку отправки формы
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', submitForm);
+
+        const head = document.getElementById("head");
+        head.textContent = "Добро пожаловать на наш сайт!";
+        
+        const header = document.getElementById("header");
+        header.style.color = "red";
+
+        const firstItem = document.querySelector(".item");
+        firstItem.innerHTML = "Это новый текст параграфа.";
+    </script>
+</body>
+</html>

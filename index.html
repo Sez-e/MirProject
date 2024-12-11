@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-червы-64.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Главная</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="bg-light">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <div class="logo d-flex align-items-center">
+                <div class="square mr-2"></div>
+                <p>Logo</p>
+            </div>
+            <div class="group text-right">
+                <p>Группа <span>ЭФБО-05-23</span></p>
+                <p>Савина Мария Сергеевна</p>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto w-100 justify-content-around">
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index(2).html">Первый семестр</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#frontend">Второй семестр</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index(1).html">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Авторизация</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="text-center">
+            <h1>Добро пожаловать на мой сайт!</h1>
+            <div class="hero-hello d-flex flex-column align-items-center">
+                <p>Меня зовут Савина Мария Сергеевна, и я начинающий специалист по веб-разработке.</p>
+                <img class="user-image img-fluid" src="images/ec60025d96c81e4e784f33fd73d86b73.png" alt="Китик">
+            <div class="content">
+                <p><b>Навигация по странице:</b></p>
+                <p><a href="#frontend">Фронтенд</a></p>
+                <p><a href="#backend">Бэкенд</a></p>
+            </div>
+            <button onclick="toggleVisibility('.content')">Переключить видимость</button>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-6">
+                <h2 id="frontend">Фронтенд</h2>
+                <p id="paragraph">Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные и привлекательные интерфейсы. Основная задача фронтенда - обеспечить удобство использования и эстетическую привлекательность.</p>
+                <video class="video img-fluid" src="images/509865_cat_window_black_Italy black cat in window jumps out720p5000br.mp4" controls></video>
+            </div>
+            <div class="col-md-6">
+                <h2 id="backend">Бэкенд</h2>
+                <p>Бэкенд (или серверная часть) - это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда - обеспечить стабильную работу приложения и безопасность данных.</p>
+                <video class="video img-fluid" src="images/4935722_Cats_Pets_1920x1080.mp4" controls></video>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center py-3">
+        <p><small>&copy; Савина Мария Сергеевна, 2024</small></p>
+        <div class="social">
+            <img class="whatsapp" src="images/vecteezy_whatsapp-png-icon_16716480.png" alt="whatsapp" height="20">
+            <img class="vk" src="images/vk_process_mining.png" alt="vk" height="20">
+        </div>
+    </footer>
+
+    <button class="scrolltop btn btn-primary" onclick="scrollToTop()">↑</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

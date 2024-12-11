@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-червы-64.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style(1).css">
+    <title>Услуги</title>
+</head>
+<body>
+    <header class="bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <div class="square mr-2"></div>
+                <p>Logo</p>
+            </div>
+            <div class="group text-right">
+                <p>Группа <span>ЭФБО-05-23</span></p>
+                <p>Савина Мария Сергеевна</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto w-100 justify-content-around">
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index(2).html">Первый семестр</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#frontend">Второй семестр</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index(1).html">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Авторизация</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center_text-primary">Разработка веб-приложений</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="images/casual-life-3d-lying-cat.png" class="card-img-top" alt="Ленивый китик">
+                    <div class="card-body">
+                        <h5 class="card-title">Сайт-визитка</h5>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalWin">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="images/3d-casual-life-cat-lies-on-document.png" class="card-img-top" alt="Китик на документах">
+                    <div class="card-body">
+                        <h5 class="card-title">Корпоративный сайт</h5>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalWin">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="images/3d-casual-life-cat-with-books-and-mouse.png" class="card-img-top" alt="Китик и мышь">
+                    <div class="card-body">
+                        <h5 class="card-title">Интернет-магазин</h5>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalWin">Заказать</button>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+        <div class="text-center">
+            <p class="text">Кошка — домашнее животное, одно из наиболее популярных (наряду с собаками) «животных-компаньонов» или домашних животных.</p>
+            <p class="text">Кошки — млекопитающие и плотоядные животные.</p>
+            <p class="text">За способность уничтожать грызунов люди ценят кошек около 10 000 тысяч лет. Являясь одиночным охотником на грызунов и других мелких животных, кошка — социальное животное, использующее для общения широкий диапазон звуковых сигналов, а также феромоны и движения тела.</p>
+            <p class="text">В настоящее время в мире насчитывается около 600 млн домашних кошек, выведено около 256 пород, от длинношерстных (персидская кошка) до лишённых шерсти (сфинксы), признанных и зарегистрированных различными фелинологическими организациями. Самая первая порода кошек появилась в Египте. Кошки распространены по всему миру.</p>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3">
+        <p><small>&copy; Савина Мария Сергеевна, 2024</small></p>
+        <div class="social">
+            <img class="whatsapp" src="images/vecteezy_whatsapp-png-icon_16716480.png" alt="whatsapp" style="height: 20px;">
+            <img class="vk" src="images/vk_process_mining.png" alt="vk" style="height: 20px;">
+        </div>
+    </footer>
+
+    <!-- Modal для формы -->
+    <div class="modal fade" id="modalWin" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Разработка веб-приложения</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Имя:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Иванов Иван Иванович" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Электронная почта:</label>
+                            <input type="email" class="form-control" id="email" placeholder="test@mail.ru" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Номер телефона:</label>
+                            <input type="tel" class="form-control" id="telephone" placeholder="+7 919 999 99 99" name="telephone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Страна:</label>
+                            <select class="form-control" id="country" name="country">
+                                <option value="Russia">Россия</option>
+                                <option value="not Russia">Не Россия</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Выберите дату:</label>
+                            <input type="date" class="form-control" id="date" min="2000-01-01" max="2028-12-31">
+                        </div>
+                        <div class="form-group">
+                            <label for="comments">Комментарии:</label>
+                            <textarea class="form-control" id="comments" name="comments"></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="data" type="checkbox" required>
+                            <label class="form-check-label" for="data">Согласен на обработку моих персональных данных</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно благодарности -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="thankYouLabel">Спасибо!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="scrolltop btn btn-primary" onclick="scrollToTop()">↑</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="form.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
